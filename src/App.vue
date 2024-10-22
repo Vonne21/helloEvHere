@@ -1,85 +1,76 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { watch, ref } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+
+const router = useRouter()
+const route = useRoute();
+let currentPath = ref();
+let currentAboutMe = ref(false);
+let currentExp = ref(false);
+let currentContact = ref(false);
+
+watch(route, (route) => {
+  currentPath.value = route.fullPath;
+  switch (currentPath.value) {
+    case '/':
+      router.push('/AboutMe')
+      currentAboutMe.value = true;
+      currentExp.value = false;
+      currentContact.value = false;
+      break;
+    case '/AboutMe':
+      currentAboutMe.value = true;
+      currentExp.value = false;
+      currentContact.value = false;
+      break;
+    case '/MyExperience':
+      currentAboutMe.value = false;
+      currentExp.value = true;
+      currentContact.value = false;
+      break;
+    case '/ContactMe':
+      currentAboutMe.value = false;
+      currentExp.value = false;
+      currentContact.value = true;
+      break;
+  
+    default:
+      break;
+  }
+  if (currentPath.value == '/') {
+    router.push('/AboutMe')
+    currentAboutMe.value = true;
+  }
+})
 </script>
 
-<template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+<template >
+  <header class="shadow-md shadow-blue-500/50 flex font-Silkscreen">
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <RouterLink to="/" class="text-black pulse-animation mr-auto">HELLO :)</RouterLink>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+    <RouterLink to="/AboutMe" class="group flex mr-3">
+      <p :class="[currentAboutMe ? visible : 'invisible group-hover:visible group-hover:animate-pulse']">*</p>
+      <button class="text-black">ABOUT</button>
+    </RouterLink>
+
+    <RouterLink to="/MyExperience" class="group flex mr-3">
+      <p :class="[currentExp ? visible : 'invisible group-hover:visible group-hover:animate-pulse']">*</p>
+      <button class="text-black">EXP</button>
+    </RouterLink>
+
+    <RouterLink to="/ContactMe" div class="group flex">
+      <p :class="[currentContact ? visible : 'invisible group-hover:visible group-hover:animate-pulse']">*</p>
+      <button class="text-black">CONTACT ME</button>
+    </RouterLink>
   </header>
-
   <RouterView />
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.pulse-animation {
+  animation: pulse 0.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
 </style>
