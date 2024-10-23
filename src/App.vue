@@ -45,7 +45,7 @@ watch(route, (route) => {
 </script>
 
 <template >
-  <header class="shadow-md shadow-blue-500/50 flex font-Silkscreen">
+  <header class="shadow-md shadow-blue-500/50 flex font-Silkscreen border-b-2 border-cyan-100">
 
     <RouterLink to="/" class="text-black pulse-animation mr-auto">HELLO :)</RouterLink>
 

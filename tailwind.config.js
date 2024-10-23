@@ -15,6 +15,7 @@ module.exports = {
         'nabla': ['"Nabla"', 'serif'],
         'DotGothic16': ['"DotGothic16"', 'serif'],
         'Silkscreen': ['"Silkscreen"', 'sans-serif'],
+        'Quicksand': ['"Quicksand"', 'sans-serif'],
       },
       display: ["group-hover"],
     },

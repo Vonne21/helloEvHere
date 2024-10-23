@@ -9,7 +9,33 @@
         <p class="font-Silkscreen text-4xl ">Contact Me</p>
         <p class="font-Silkscreen text-4xl mb-5">‾ ‾ ‾ ‾ ‾</p>
       </div>
-      <p class="font-Silkscreen text-lg">1800-18-2525</p>
+      <!-- <img src="/530.png" alt="" class="max-h-44 mx-auto"> -->
+      <img src="/hand-hang-loose-svgrepo-com.svg" alt="" class="max-h-40 mx-auto animate-bounce">
+
+
+
+      <div class="rounded-lg border-2 border-black border-dashed mx-auto w-max px-5 py-4 ">
+
+        <a class="flex justify-center mb-5 cursor-pointer" href="https://www.linkedin.com/in/eevonneng/"
+          target="_blank">
+          <img src="/linkedin.png" alt="" class="h-4 w-4 self-center mr-2">
+          <p class="font-Silkscreen">Ee Vonne's Linkedin</p>
+        </a>
+
+        <p class="font-Silkscreen mb-5"><a href="mailto:eevonne.ng@gmail.com" type="email">eevonne.ng@gmail.com</a></p>
+
+        <div class="group relative font-Silkscreen cursor-pointer">
+          <div class="flex  visible group-hover:invisible justify-center">
+            <p> <span class="animate-ping">>></span> So call me maybe <span class="animate-ping">
+                << </span>
+            </p>
+          </div>
+          <a href="https://wa.me/+60192842975"
+            class="absolute top-0 left-0 invisible group-hover:visible bottom-0 right-0" target="_blank"> +6019 284 2975
+          </a>
+        </div>
+      </div>
+
     </div>
   </main>
 </template>
