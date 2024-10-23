@@ -3,21 +3,44 @@
 
 <template>
   <main>
-    <div class="text-center mt-5 font-Silkscreen">
+    <div class="text-center my-5 font-Silkscreen max-w-lg mx-auto">
       <div>
         <p class="text-4xl ">About Me</p>
         <p class="text-4xl ">‾ ‾ ‾ ‾ ‾</p>
       </div>
       <img src="/582.png" alt="" class="max-h-44 mx-auto">
 
-      <p class="text-lg underline decoration-dotted decoration-1 underline-offset-4">· Ee Vonne Ng ·</p>
+      <p class="text-2xl underline decoration-dotted decoration-1 underline-offset-4">· Ee Vonne Ng ·</p>
+      <p class="mt-3 text-lg"> Graduated from UNITEN 2019</p>
       <p class="text-lg">On earth since 1996 DEC 21</p>
       <p class="text-lg">Ipoh Mari</p>
 
-      <div class="mt-7 max-w-lg mx-auto">
-        <p class="font-Quicksand text-justify">Dedicated front-end developer with over five years of experience in building dynamic web applications using Vue.js frameworks. Proven ability to create user-friendly interfaces and improve application performance while collaborating with cross-functional teams. Passionate about coding, design, and continuous learning.</p>
+
+      <div class="mt-7">
+        <p class="font-Quicksand text-justify">Dedicated front-end developer with over five years of experience in
+          building dynamic web applications using Vue.js frameworks. Proven ability to create user-friendly interfaces
+          and improve application performance while collaborating with cross-functional teams. Passionate about coding,
+          design, and continuous learning.</p>
+      </div>
+      <!-- <div class="mt-7">
+        <p class="font-Silkscreen text-lg mb-2">Skill</p>
+        <p class="font-Quicksand">xxxx xxxxx xxxx xxxx xxxxx</p>
+      </div> -->
+      <div class="mt-7">
+        <p class="font-Silkscreen text-xl mb-2">Skill</p>
+        <p class="font-Quicksand">Vue, Tailwind, Agile, Jira, Git, Bitbucket, Bit of KQL, AEM. </p>
+      </div>
+      <div class="mt-7">
+        <p class="font-Silkscreen text-xl mb-2">Language</p>
+        <p class="font-Quicksand">Chinese, English, Malay, Cantonese.</p>
+      </div>
+      <div class="mt-7">
+        <p class="font-Silkscreen text-xl mb-2">Fun Fact</p>
+        <p class="font-Quicksand">A dog Mom, Love to sleep, Love photography, K-pop, Love 2NE1, IU, MAYDAY.</p>
       </div>
     </div>
+
+
 
 
   </main>
