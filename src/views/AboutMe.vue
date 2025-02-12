@@ -1,9 +1,28 @@
 <script setup>
 </script>
+<style scoped>
+.hover-img {
+  width: 60px;
+  height: 60px;
+  bottom: 100%;
+  left: 48%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.hover-main:hover .hover-img {
+  display: block;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+}
+</style>
 
 <template>
   <main>
-    <div class="text-center my-5 font-Silkscreen max-w-lg mx-auto">
+    <div class="text-center my-5 font-Silkscreen max-w-2xl mx-auto">
       <div>
         <p class="text-4xl ">About Me</p>
         <p class="text-4xl ">‾ ‾ ‾ ‾ ‾</p>
@@ -36,12 +55,17 @@
       </div>
       <div class="mt-7">
         <p class="font-Silkscreen text-xl mb-2">Fun Fact</p>
-        <p class="font-Quicksand">A dog Mom, Love to sleep, Love photography, K-pop, Love 2NE1, IU, MAYDAY.</p>
+
+        <div class="font-Quicksand ">
+          <div>
+            <span>A </span>
+            <span class="hover-main relative inline-block md:underline sm:no-underline decoration-dotted cursor-pointer">Dog mom,<img
+                src="/dog.gif" alt="" class="hover-img absolute"></span>
+            <span> Love to sleep, Love photography, K-pop, Love 2NE1, IU, MAYDAY.</span>
+          </div>
+        </div>
+
       </div>
     </div>
-
-
-
-
   </main>
 </template>

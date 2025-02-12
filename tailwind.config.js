@@ -7,6 +7,9 @@ module.exports = {
       colors: {
         royalBlue: {
           'rb':'#003f88',
+        },
+        blue: {
+          '666': '#D5E4F7',
         }
       },
       fontFamily: {
@@ -18,6 +21,16 @@ module.exports = {
         'Quicksand': ['"Quicksand"', 'sans-serif'],
       },
       display: ["group-hover"],
+
+      animation: {
+        'infinite-scroll': 'infinite-scroll 4s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        }
+      },
     },
   },
   plugins: [],

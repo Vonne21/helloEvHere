@@ -1,4 +1,26 @@
 <script setup>
+import { ref, onMounted, onBeforeUnmount } from "vue";
+
+let isMobileView = ref(false);
+let callme = ref(false);
+
+const checkIsMobile = () => {
+  console.log('isMobile');
+  if (window.innerWidth < 450) {
+    isMobileView.value = true;
+  } else {
+    isMobileView.value = false;
+  }
+}
+onMounted(() => {
+  window.addEventListener('resize', checkIsMobile); // Pass the function reference, not the result of its call
+  checkIsMobile(); // Check the screen size immediately after mounting
+});
+
+// Cleanup the event listener when the component is unmounted
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', checkIsMobile);
+});
 
 </script>
 
@@ -10,7 +32,7 @@
         <p class="font-Silkscreen text-4xl mb-5">‾ ‾ ‾ ‾ ‾</p>
       </div>
       <!-- <img src="/530.png" alt="" class="max-h-44 mx-auto"> -->
-      <img src="/hand-hang-loose-svgrepo-com.svg" alt="" class="max-h-40 mx-auto animate-bounce">
+      <img src="/hand.png" alt="" class="max-h-40 mx-auto animate-bounce">
 
 
 
@@ -24,16 +46,25 @@
 
         <p class="font-Silkscreen mb-5"><a href="mailto:eevonne.ng@gmail.com" type="email">eevonne.ng@gmail.com</a></p>
 
-        <div class="group relative font-Silkscreen cursor-pointer">
-          <div class="flex  visible group-hover:invisible justify-center">
+        <div v-if="!isMobileView" class="group relative font-Silkscreen cursor-pointer">
+          <div class="flex visible group-hover:invisible justify-center">
             <p> <span class="animate-ping">>></span> So call me maybe <span class="animate-ping">
                 << </span>
             </p>
           </div>
           <a href="https://wa.me/+60192842975"
-            class="absolute top-0 left-0 invisible group-hover:visible bottom-0 right-0" target="_blank"> +6019 284 2975
+            class="absolute top-0 left-0 invisible group-hover:visible bottom-0 right-0" target="_blank"
+            id="phone-number"> +6019 284 2975
           </a>
         </div>
+
+        <div v-if="isMobileView" class="group relative font-Silkscreen cursor-pointer">
+            <a href="https://wa.me/+60192842975" target="_blank">
+              <span class="animate-ping">>></span> So call me maybe
+              <span class="animate-ping"><<</span>
+            </a>
+        </div>
+
       </div>
 
     </div>
