@@ -6,7 +6,7 @@
 html, body {
   cursor: url('/cursor.png'), default;
 }
-body {
+body, header{
   @apply bg-blue-100;
 }
 
@@ -26,6 +26,6 @@ main {
   margin: 0 auto; 
   padding-top: 0.5rem;
   padding-right: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 0;
   padding-left: 1.5rem;
 }

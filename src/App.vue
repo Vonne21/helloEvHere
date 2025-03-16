@@ -71,21 +71,22 @@ watch(route, (route) => {
 </script>
 
 <template >
-  
-  <header class="wave-header shadow-md shadow-blue-500/50 flex font-Silkscreen border-b-2 border-cyan-100 items-center">
 
-    <RouterLink to="/" class="text-black pulse-animation mr-auto">HELLO :)</RouterLink>
+  <header
+    class="shadow-md shadow-blue-500/50 flex font-Silkscreen border-b-2 border-cyan-100 items-center fixed top-0 w-full z-50">
+
+    <RouterLink to="/" class="text-black pulse-animation mr-auto md:ml-7">HELLO :)</RouterLink>
 
 
-    <div v-if="!isMobileView" class="flex">
-      <RouterLink to="/AboutMe" class="group flex mr-3">
+    <div v-if="!isMobileView" class="flex mr-7">
+      <RouterLink to="/AboutMe" class="group flex mr-6 ">
         <p
           :class="[currentAboutMe ? 'visible pulse-animation' : 'invisible group-hover:visible group-hover:animate-pulse']">
           *</p>
         <button class="text-black">ABOUT</button>
       </RouterLink>
 
-      <RouterLink to="/MyExperience" class="group flex mr-3">
+      <RouterLink to="/MyExperience" class="group flex mr-6">
         <p
           :class="[currentExp ? 'visible pulse-animation' : 'invisible group-hover:visible group-hover:animate-pulse']">
           *</p>
@@ -107,7 +108,7 @@ watch(route, (route) => {
       </button>
 
       <nav v-if="isMenuOpen"
-        class="border-b-2 border-t-2 border-black border-dotted rounded-md shadow shadow-gray-500/50 bg-blue-666 bg-opacity-95 bg-blend-darken w-2/5 right-3 top-16 absolute px-3 py-2">
+        class="z-50 border-b-2 border-t-2 border-black border-dotted rounded-md shadow shadow-gray-500/50 bg-blue-666 bg-opacity-95 bg-blend-darken w-2/5 right-3 top-16 absolute px-3 py-2">
         <div class="text-right">
           <RouterLink @click="isMenuOpen = false" to="/AboutMe" class="group flex justify-end mb-1">
             <button class="text-black mr-1">ABOUT</button>
@@ -124,7 +125,7 @@ watch(route, (route) => {
           </RouterLink>
 
           <RouterLink @click="isMenuOpen = false" to="/ContactMe" div class="group flex justify-end">
-            <button class="text-black mr-1">CONTACT ME</button>
+            <button class="text-black mr-1">CALL ME</button>
             <p
               :class="[currentContact ? 'visible pulse-animation' : 'invisible group-hover:visible group-hover:animate-pulse']">
               *</p>
@@ -136,12 +137,33 @@ watch(route, (route) => {
   </header>
 
   <TheWeatherDisplay />
-  <RouterView />
+  <transition name="fade" mode="out-in">
+    <RouterView :key="$route.fullPath" class="screen-h pt-32 md:pt-28" />
+  </transition>
 
 </template>
 
 <style scoped>
 .pulse-animation {
   animation: pulse 0.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+/* Add animation manually */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.screen-h {
+  min-height: calc(100vh - 74px);
+}
+
+@media screen and (max-width: 450px), (max-width: 768px) {
+.screen-h {
+    min-height: calc(100vh - 120px);
+  }
 }
 </style>

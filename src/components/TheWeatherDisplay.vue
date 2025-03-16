@@ -38,15 +38,17 @@ onMounted(() => {
 <style scope></style>
 
 <template>
-	<div v-if="weatherData" class="px-6 visible mt-2 text-xs font-Silkscreen ">
-		<div class="max-w-2xl mx-auto">
-			<span class="flex flex-col md:flex-row items-center md:justify-center">
-				<p class="mr-0 md:mr-4">★ {{ weatherData.location.region }}</p>
-				<p class="mr-0 md:mr-4">{{ date }}</p>
-				<p class="mr-0 md:mr-4">{{ weatherData.current.temp_c }}°C</p>
-				<p class="">{{ weatherData.current.condition.text }} ★</p>
-			</span>
+	<div class="fixed left-0 right-0 -z-10 md:z-0 pt-14 md:pt-20 md:mt-2">
+		<div class="px-6 visible text-xs font-Silkscreen bg-blue-100 ">
+			<div v-if="weatherData" class="md:max-w-2xl mx-auto bg-blue-100">
+				<span class="flex flex-col md:flex-row items-center md:justify-center">
+					<p class="mr-0 md:mr-4">★ {{ weatherData.location.region }}</p>
+					<p class="mr-0 md:mr-4">{{ date }}</p>
+					<p class="mr-0 md:mr-4">{{ weatherData.current.temp_c }}°C</p>
+					<p class="">{{ weatherData.current.condition.text }} ★</p>
+				</span>
+			</div>
+			<img v-else src="/loading.gif" alt="" class="mx-auto w-6 h-4 mt-2">
 		</div>
 	</div>
-	<div v-else class="flex justify-center"><img src="/loading.gif" alt="" class="w-6 h-4 mt-2"></div>
 </template>
