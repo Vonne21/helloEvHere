@@ -19,6 +19,9 @@ module.exports = {
         'DotGothic16': ['"DotGothic16"', 'serif'],
         'Silkscreen': ['"Silkscreen"', 'sans-serif'],
         'Quicksand': ['"Quicksand"', 'sans-serif'],
+        'Quantico': ['"Quantico"', 'sans-serif'],
+        'Chakra': ['"Chakra Petch"', 'sans-serif'],
+        'Figtree': ['"Figtree"', 'sans-serif'],
       },
       display: ["group-hover"],
 

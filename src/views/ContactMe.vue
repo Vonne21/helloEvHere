@@ -36,7 +36,7 @@ onBeforeUnmount(() => {
 
 
 
-      <div class="rounded-lg border-2 border-black border-dashed mx-auto w-max px-5 py-4 ">
+      <div class="rounded-lg border-2 border-black border-dashed mx-auto w-max px-5 py-4 dim">
 
         <a class="flex justify-center mb-5 cursor-pointer" href="https://www.linkedin.com/in/eevonneng/"
           target="_blank">
@@ -70,3 +70,9 @@ onBeforeUnmount(() => {
     </div>
   </main>
 </template>
+
+<style scope>
+.dim {
+  background-color: rgba(133, 164, 214, 0.2);
+}
+</style>

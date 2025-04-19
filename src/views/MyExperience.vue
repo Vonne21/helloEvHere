@@ -8,7 +8,7 @@ import TheScroll from "../components/TheScroll.vue";
       <div class="">
         <div class="text-center">
           <p class="font-Silkscreen text-4xl ">Credit of life so far</p>
-          <p class="font-Silkscreen text-4xl mb-5">‾ ‾ ‾ ‾ ‾</p>
+          <p class="font-Silkscreen text-4xl md:mb-5 sm:mb-0">‾ ‾ ‾ ‾ ‾</p>
         </div>
       </div>
     </div>

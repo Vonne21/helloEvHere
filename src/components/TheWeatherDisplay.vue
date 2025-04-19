@@ -31,16 +31,19 @@ onMounted(() => {
 	getGeolocation();
 });
 
-
-
 </script>
 
-<style scope></style>
+<style scope>
+.gradient{
+	background: #E0FFFF;
+	background: linear-gradient(90deg, rgba(224, 255, 255, 1) 0%, rgba(153, 194, 255, 1) 45%, rgba(204, 204, 255, 1) 96%);
+}
+</style>
 
 <template>
 	<div class="fixed left-0 right-0 -z-10 md:z-0 pt-14 md:pt-20 md:mt-2">
-		<div class="px-6 visible text-xs font-Silkscreen bg-blue-100 ">
-			<div v-if="weatherData" class="md:max-w-2xl mx-auto bg-blue-100">
+		<div class="px-6 visible text-xs font-Silkscreen gradient ">
+			<div v-if="weatherData" class="md:max-w-2xl mx-auto">
 				<span class="flex flex-col md:flex-row items-center md:justify-center">
 					<p class="mr-0 md:mr-4">★ {{ weatherData.location.region }}</p>
 					<p class="mr-0 md:mr-4">{{ date }}</p>

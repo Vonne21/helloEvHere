@@ -3,17 +3,41 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html, body {
+* {
   cursor: url('/cursor.png'), default;
-}
-body, header{
-  @apply bg-blue-100;
 }
 
 header {
   margin: 0 auto; 
   padding: 1rem;
 }
+header, body {
+  background: linear-gradient(90deg,#e0ffff 0%, #99c2ff 45%, #ccccff 96%);
+}
+
+body::after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+
+  width: 80vw;
+  height: 80vh;
+  opacity: 0.65;
+
+  background-image: url('/planet.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  filter: drop-shadow(0 0 0.8rem rgb(207 250 254));
+  z-index: -1; 
+  pointer-events: none;
+}
+
+
 
 @media screen and (max-width: 450px) {
   header {

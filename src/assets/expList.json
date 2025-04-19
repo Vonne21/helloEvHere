@@ -2,43 +2,66 @@
 	{
 		"id": "1",
 		"label": "Oct 2019 - Pres.",
-		"company": "SilverWind Digital Sdn Bhd",
+		"company": "✦ SilverWind Digital Sdn Bhd ✦",
 		"content": [
 			{
-				"subCompany": "AIA Bhd.",
+				"subCompany": "* AIA Bhd. ",
 				"link": "https://www.aia.com.my/",
 				"project": [
 					{
-						"projectName": "AIA Malaysia's Change Request",
+						"projectName": "▸ AIA Malaysia's Change Request",
 						"duration": "2019-2021",
 						"description": [
-							"Responsible on developing the front-end of the website for this kindergarten."
+							"Develop on exisitng page with new function or new UI."
 						]
 					},
 					{
-						"projectName": "AIA Malaysia's Service Request",
+						"projectName": "▸ AIA Malaysia's Service Request",
 						"duration": "2021-2024",
 						"description": [
-							"Responsible on developing the front-end of the website for this kindergarten."
+							"To digitalize the submition of policy-related service request. Etc.Edit profile detail, change payment method...",
+							"Focused on delivering a seamless, user-friendly experience while meeting business requirements and ensuring smooth integration.",
+							"Develop features using Vue.js.",
+							"Oversee code branches and assigned tasks to junior developers to ensure an efficient workflow.",
+							"Collaborated with the team in an Agile, sprint-based environment.",
+							"Managed timelines, estimated story points, and make production deployments plan with the BAs."
 						]
 					},
 					{
-						"projectName": "AIA+ Malaysia",
-						"duration": "2024-Present",
+						"projectName": "▸ AIA+ Malaysia (SRE)",
+						"duration": "July 2024 - Oct 2024",
 						"description": [
-							"Responsible on developing the front-end of the website for this kindergarten."
+							"Got a 3-month opportunity to work as a Junior SRE, where I learned about system reliability and performance tools.",
+							"Assisted in using Dynatrace for performance monitoring and issue detection on the AIA+ platform.",
+							"Utilized KQL in Microsoft Azure to extract accurate performance metrics for targeted APIs.",
+							"Support prodcution issue ticket as a BAU developer",
+							"Focused on delivering a seamless, user-friendly experience while meeting business requirements and ensuring smooth integration."
+						]
+					},
+					{
+						"projectName": "▸ AIA+ Malaysia (BAU)",
+						"duration": "Oct 2024 - Present",
+						"description": [
+							"Support prodcution issue ticket as a BAU developer",
+							"Handled day-to-day support and enhancements for the AIA+ web portal as a BAU developer.",
+							"Investigated and resolved production issues by collaborating with backend teams and analyzing logs using KQL with Microsoft Azure.",
+							"Delivered timely fixes and implemented ad-hoc enhancements to ensure application stability and user satisfaction.",
+							"Provided midnight support and participated in production deployments following UAT sign-off."
 						]
 					}
 				]
 			},
 			{
-				"subCompany": "Pod in the hood - Ipoh",
+				"subCompany": "* Pod in the hood, Ipoh",
 				"link": "https://www.podinthehood.com/",
 				"project": [
 					{
-						"projectName": "Pod in the hood Kindergarden",
+						"projectName": "▸ Pod in the hood Kindergarden",
 						"duration": "2019",
-						"description": ["Responsible on developing the front-end of the website for this kindergarten."]
+						"description": [
+							"Responsible on developing the front-end of the website for this kindergarten.",
+							"Implemented updates based on evolving client needs to ensure the application remained aligned with business objectives."
+						]
 					}
 				]
 			}
@@ -47,13 +70,13 @@
 	{
 		"id": "2",
 		"label": "Feb 2019",
-		"company": "ResMed MY",
+		"company": "✦ ResMed MY ✦",
 		"content": [
 			{
-				"subCompany": "Salesforce",
+				"subCompany": "* Salesforce",
 				"project": [
 					{
-						"projectName": "Salesforce Business Analyst Intern",
+						"projectName": "▸ Salesforce Business Analyst Intern",
 						"duration": "Feb 2019 - May 2019",
 						"description": [
 							"Gained hands-on experience in configuring and maintaining Salesforce, troubleshooting issues, and documenting processes. With guidance from senior team members, I helped automate notification processes and built a prototype user-friendly UI. "
@@ -66,25 +89,41 @@
 	{
 		"id": "3",
 		"label": "Education",
-		"company": "University Tenaga Nasional & etc.",
+		"company": "✦ Education ✦",
 		"content": [
 			{
-				"projectName": "Professional Scrum Master I",
-				"duration": "April 2021",
-				"subCompany": "Scrum.org Issued"
-			},
-			{
-				"subCompany": "University Tenaga Nasional",
+				"subCompany": "* Scrum.org ",
 				"project": [
 					{
-						"projectName": "Bachelor of Computer Science (Hons.), Computer Software Engineering",
+						"projectName": "▸ Professional Scrum Master I",
+						"duration": "Apr 2021",
+						"description": [
+							"Earned Scrum Master I certification by passing the official online exam."
+							
+						]
+					}
+				]
+			},
+			{
+				"subCompany": "* University Tenaga Nasional ⁺",
+				"project": [
+					{
+						"projectName": "▸ Bachelor of Computer Science (Hons.), Computer Software Engineering",
 						"duration": "2017-2019",
-						"description": ["Vice President of Christian society club, Act in a Christmas Play, Chance to go for a short student exchange program in Beijing Insitude of Technology, Zhu Hai"]
+						"description": [
+							"Chance to go for a short student exchange program in Beijing Insitude of Technology, Zhu Hai, China.",
+							"Vice President, Christian society club : Led and coordinated club activities, Collaborated with the executive team to organize events, workshops, and outreach programs.Represented the club in meetings and events, promoting its mission and values.",
+							"Act in a Christmas Play and Chinese Society Play."
+							
+						]
 					},
 					{
-						"projectName": "Diploma In Computer Science",
+						"projectName": "▸ Diploma In Computer Science",
 						"duration": "2014-2016",
-						"description": ["Discovered that I have a true passion for web development, particularly frontend development."]
+						"description": [
+							"Committee Member, Christian Society Club : Contributed to organizing events, supporting club operations, and promoting community engagement within the club.",
+							"Discovered that I have a true passion for web development, particularly frontend development."
+						]
 					}
 				]
 			}

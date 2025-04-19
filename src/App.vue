@@ -71,7 +71,6 @@ watch(route, (route) => {
 </script>
 
 <template >
-
   <header
     class="shadow-md shadow-blue-500/50 flex font-Silkscreen border-b-2 border-cyan-100 items-center fixed top-0 w-full z-50">
 
@@ -103,12 +102,12 @@ watch(route, (route) => {
 
     <div v-else>
       <button class="flex flex-col content-center">
-        <span v-if="!isMenuOpen" @click="isMenuOpen = true"><img class="w-8 h-8" src="/star-0.png" alt=""></span>
-        <span v-else @click="isMenuOpen = false"><img class="w-8 h-8 pulse-animation" src="/star-1.png" alt=""></span>
+        <span v-if="!isMenuOpen" @click="isMenuOpen = true"><img class="w-5 h-5" src="/star-0.png" alt=""></span>
+        <span v-else @click="isMenuOpen = false"><img class="w-5 h-5 pulse-animation" src="/star-1.png" alt=""></span>
       </button>
 
       <nav v-if="isMenuOpen"
-        class="z-50 border-b-2 border-t-2 border-black border-dotted rounded-md shadow shadow-gray-500/50 bg-blue-666 bg-opacity-95 bg-blend-darken w-2/5 right-3 top-16 absolute px-3 py-2">
+        class="z-50 border-b-2 border-t-2 border-black border-dotted rounded-md shadow shadow-gray-500/50 dim bg-opacity-95 bg-blend-darken w-2/5 right-3 top-16 absolute px-3 py-2">
         <div class="text-right">
           <RouterLink @click="isMenuOpen = false" to="/AboutMe" class="group flex justify-end mb-1">
             <button class="text-black mr-1">ABOUT</button>
@@ -136,10 +135,12 @@ watch(route, (route) => {
 
   </header>
 
+
   <TheWeatherDisplay />
   <transition name="fade" mode="out-in">
     <RouterView :key="$route.fullPath" class="screen-h pt-32 md:pt-28" />
   </transition>
+
 
 </template>
 
@@ -159,6 +160,9 @@ watch(route, (route) => {
 }
 .screen-h {
   min-height: calc(100vh - 74px);
+}
+.dim{
+    background-color: rgba(133, 164, 214, 0.5);
 }
 
 @media screen and (max-width: 450px), (max-width: 768px) {

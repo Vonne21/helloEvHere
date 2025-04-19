@@ -61,7 +61,7 @@
             <span>A </span>
             <span class="hover-main relative inline-block md:underline sm:no-underline decoration-dotted cursor-pointer">Dog mom,<img
                 src="/dog.gif" alt="" class="hover-img absolute"></span>
-            <span> Love to sleep, Love photography, K-pop, Love 2NE1, IU, MAYDAY.</span>
+            <span> Love to sleep, Love photography, Movies, K-pop, K-Drama, Love 2NE1, IU, MAYDAY.</span>
           </div>
         </div>
 
