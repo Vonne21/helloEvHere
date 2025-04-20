@@ -46,11 +46,10 @@ const scrollToSection = (sectionId) => {
 	<div class="fixed mx-auto max-w-4xl flex flex-col md:flex-row font-Silkscreen pt-2 left-0 right-0 px-4 md:px-0">
 		<!-- Side Menu -->
 		<div class="text-center md:text-right w-full md:w-52 ">
-			<div class=" flex flex-row md:flex-col justify-center p-0 overflow-scroll flex-shrink-0">
+			<div class=" flex flex-row md:flex-col justify-center p-0 overflow-scroll md:overflow-hidden flex-shrink-0">
 				<a class="flex-shrink-0 my-3 mr-4 md:mr-0 last-of-type:mr-0 cursor-pointer transition-all duration-200"
 					v-for="(item, index) in expItems" :key="index"
-					:class="{ 'font-extrabold ': activeSection === item.id,}"
-					@click="scrollToSection(item.id)">
+					:class="{ 'font-extrabold ': activeSection === item.id,}" @click="scrollToSection(item.id)">
 					{{ item.label }}
 				</a>
 			</div>

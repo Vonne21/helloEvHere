@@ -8,6 +8,10 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     {
+      path: '/',
+      redirect: '/AboutMe',
+    },
+    {
       path: '/AboutMe',
       name: 'AboutMe',
       component: AboutMe

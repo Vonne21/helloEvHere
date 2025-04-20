@@ -4,7 +4,7 @@ import TheScroll from "../components/TheScroll.vue";
 
 <template>
   <main>
-    <div class="text-center mt-5 static left-0 right-0">
+    <div class="text-center mt-5">
       <div class="">
         <div class="text-center">
           <p class="font-Silkscreen text-4xl ">Credit of life so far</p>

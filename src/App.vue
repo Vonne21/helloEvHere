@@ -32,11 +32,9 @@ onBeforeUnmount(() => {
 
 
 watch(route, (route) => {
-  
   currentPath.value = route.fullPath;
   switch (currentPath.value) {
     case '/':
-      router.push('/AboutMe')
       currentAboutMe.value = true;
       currentExp.value = false;
       currentContact.value = false;
@@ -59,10 +57,6 @@ watch(route, (route) => {
   
     default:
       break;
-  }
-  if (currentPath.value == '/') {
-    router.push('/AboutMe')
-    currentAboutMe.value = true;
   }
 })
 
@@ -135,11 +129,12 @@ watch(route, (route) => {
 
   </header>
 
-
   <TheWeatherDisplay />
-  <transition name="fade" mode="out-in">
-    <RouterView :key="$route.fullPath" class="screen-h pt-32 md:pt-28" />
-  </transition>
+  <RouterView v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" :key="$route.fullPath" class="screen-h pt-32 md:pt-28" />
+    </transition>
+  </RouterView>
 
 
 </template>
