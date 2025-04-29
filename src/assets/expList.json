@@ -9,14 +9,14 @@
 				"link": "https://www.aia.com.my/",
 				"project": [
 					{
-						"projectName": "▸ AIA Malaysia's Change Request",
+						"projectName": "▸ AIA Malaysia's Change Request (Vue.js)",
 						"duration": "2019-2021",
 						"description": [
 							"Develop on exisitng page with new function or new UI."
 						]
 					},
 					{
-						"projectName": "▸ AIA Malaysia's Service Request",
+						"projectName": "▸ AIA Malaysia's Service Request (Vue.js)",
 						"duration": "2021-2024",
 						"description": [
 							"To digitalize the submition of policy-related service request. Etc.Edit profile detail, change payment method...",
@@ -39,7 +39,7 @@
 						]
 					},
 					{
-						"projectName": "▸ AIA+ Malaysia (BAU)",
+						"projectName": "▸ AIA+ Malaysia (BAU, Vue.js)",
 						"duration": "Oct 2024 - Present",
 						"description": [
 							"Support prodcution issue ticket as a BAU developer",
@@ -60,7 +60,8 @@
 						"duration": "2019",
 						"description": [
 							"Responsible on developing the front-end of the website for this kindergarten.",
-							"Implemented updates based on evolving client needs to ensure the application remained aligned with business objectives."
+							"Implemented updates based on evolving client needs to ensure the application remained aligned with business objectives.",
+							"Page is develop in Vue.js"
 						]
 					}
 				]
